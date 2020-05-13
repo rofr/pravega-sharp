@@ -1,6 +1,9 @@
 # .NET Standard 2.1 Client for Pravega gRPC Gateway
 
-This library provides a nuget package that allows you to connect to pravega through the pravega-grpc-gateway. Pravega is a ... (TBD), see https://pravega.io for more information!
+This library provides a nuget package that allows you to connect to Pravega through the pravega-grpc-gateway. 
+
+Pravega provides a new storage abstraction - a stream - for continuous and unbounded data. A Pravega stream is an elastic set of durable and append-only segments, each segment being an unbounded sequence of bytes. Streams provide exactly-once semantics, and atomicity for groups of events using transactions.
+See https://pravega.io
 
 ## Projects in this repository
   * PravegaSharp.Grpc  - .NET Standard 2.1 gRPC client library
