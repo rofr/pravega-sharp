@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PravegaSharp", "PravegaSharp\PravegaSharp.csproj", "{6C2B951B-778F-4D1B-AA6B-0C16D5E970BD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PravegaSharp.Grpc", "PravegaSharp.Grpc\PravegaSharp.Grpc.csproj", "{6C2B951B-778F-4D1B-AA6B-0C16D5E970BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PravegaSharp.Demo", "PravegaSharp.Demo\PravegaSharp.Demo.csproj", "{880B3621-2863-49A2-8E87-611699FB45AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +14,9 @@ Global
 		{6C2B951B-778F-4D1B-AA6B-0C16D5E970BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C2B951B-778F-4D1B-AA6B-0C16D5E970BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C2B951B-778F-4D1B-AA6B-0C16D5E970BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{880B3621-2863-49A2-8E87-611699FB45AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{880B3621-2863-49A2-8E87-611699FB45AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{880B3621-2863-49A2-8E87-611699FB45AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{880B3621-2863-49A2-8E87-611699FB45AC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
