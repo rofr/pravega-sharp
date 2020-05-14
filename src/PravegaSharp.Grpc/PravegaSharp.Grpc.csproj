@@ -10,7 +10,7 @@
         <Description>gRPC Client Library for the Pravega gRPC Gateway</Description>
         <Copyright>2020 Robert Friberg</Copyright>
         <PackageProjectUrl>https://github.com/rofr/pravega-sharp</PackageProjectUrl>
-        <PackageLicenseUrl>https://github.com/rofr/pravega-sharp</PackageLicenseUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <RepositoryUrl>https://github.com/rofr/pravega-sharp</RepositoryUrl>
         <Company>Devrex Labs</Company>
         <AssemblyVersion>0.7.0</AssemblyVersion>
@@ -18,7 +18,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Protobuf Include="../../pravega-grpc-gateway/pravega-grpc-gateway/src/main/proto/pravega/grpc_gateway/pravega.proto" GrpcServices="Client" />
+        <Protobuf Include="..\..\pravega-grpc-gateway\pravega-grpc-gateway\src\main\proto\pravega\grpc_gateway\pravega.proto" GrpcServices="Client" />
     </ItemGroup>
 
     <ItemGroup>
