@@ -1,0 +1,3 @@
+[submodule "pravega-grpc-gateway"]
+	path = pravega-grpc-gateway
+	url = https://github.com/pravega/pravega-grpc-gateway

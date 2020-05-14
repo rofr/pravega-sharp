@@ -10,6 +10,18 @@ See https://pravega.io
   * PravegaSharp.Demo  - a runnable console application that performs some basic stream operations
 
 ## Getting started
+In order to bring in protobuf definitions, [pravega-grpc-gateway](https://github.com/pravega/pravega-grpc-gateway) is included as a Git submodule.
+
+After cloning this repo, initialize and update its submodule:
+
+    git submodule update --init
+
+Or clone this repo with `--recurse-submodules`:
+
+    git clone --recurse-submodules https://github.com/rofr/pravega-sharp.git
+
+The `pravega-grpc-gateway` repo is now cloned within the project, and PravegaSharp is ready to build.
+
 To try the demo you need a pravega environment and grpc gateway to connect to. We have provided some scripts that will get you up and running quickly. Set the HOST_IP env var to the ip of your machine and then run `start-pravega.sh`. You need docker and docker-compose installed.
 
 Once the gateway is up and running, start the PravegaSharp.Demo console application.
