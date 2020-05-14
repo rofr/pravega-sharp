@@ -18,7 +18,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Protobuf Include="pravega.proto" GrpcServices="Client" />
+        <Protobuf Include="../../pravega-grpc-gateway/pravega-grpc-gateway/src/main/proto/pravega/grpc_gateway/pravega.proto" GrpcServices="Client" />
     </ItemGroup>
 
     <ItemGroup>
