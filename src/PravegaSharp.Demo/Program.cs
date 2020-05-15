@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Google.Protobuf;
 using Grpc.Core;
@@ -13,6 +14,8 @@ namespace PravegaSharp.Demo
         private const string StreamName = "mystream";
             
         private static PravegaGrpcClient _client;
+
+        private static List<EventPointer> EventPointers = new List<EventPointer>();
         
         static async Task Main(string[] args)
         {
@@ -28,6 +31,32 @@ namespace PravegaSharp.Demo
             await DisplayStreams();
             await WriteEvents();
             await ReadAllEvents();
+            await FetchSingleEvent();
+        }
+
+        private static async Task FetchSingleEvent()
+        {
+            var randomEventPointer = GetRandomEventPointer();
+            Console.Write("Fetching event with pointer:");
+            Console.WriteLine(randomEventPointer.Description);
+            
+            var request = new FetchEventRequest
+            {
+                Scope = ScopeName,
+                Stream = StreamName,
+                EventPointer = randomEventPointer
+            };
+
+            var response = await _client.FetchEventAsync(request);
+            var @event = response.Event;
+            Console.WriteLine("Event received, length: " + @event.Length);
+        }
+
+        private static EventPointer GetRandomEventPointer()
+        {
+            var rnd = new Random();
+            var idx = rnd.Next(EventPointers.Count);
+            return EventPointers[idx];
         }
 
         private static async Task ReadAllEvents()
@@ -50,6 +79,8 @@ namespace PravegaSharp.Demo
                 Console.WriteLine("   Position.Description: " + response.Position.Description);
                 Console.WriteLine("   EventPointer.Description: " + response.EventPointer.Description);
                 Console.WriteLine("   StreamCut.Description: " + response.StreamCut.Description);
+                
+                EventPointers.Add(response.EventPointer);
             }
         }
 
