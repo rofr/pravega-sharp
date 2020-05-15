@@ -348,3 +348,9 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+#Macos stuff
+.DS_Store
+
+# intellij / resharper
+.idea
